@@ -11,13 +11,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      - name: install nix
-        uses: ./
-        with:
-          logger: pretty
-          log-directives: nix_installer=trace
-          backtrace: full
-      - name: test
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v4
+      - name: Check
         run: |
           nix develop
           pnpm install
