@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "exactOptionalPropertyTypes": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "allowJs": true
+  },
+  "include": ["resources", "types", "tailwind.config.ts"],
+  "exclude": ["node_modules", "dist", "public"]
+}
