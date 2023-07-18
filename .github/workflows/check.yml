@@ -14,7 +14,4 @@ jobs:
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@v4
       - name: Check
-        run: |
-          nix develop
-          pnpm install
-          tsc --noEmit
+        run: nix develop --impure -c 'pnpm install && tsc --noEmit'
